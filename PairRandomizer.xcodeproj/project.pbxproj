@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		D8CE92DC1F59B2C100D2DAC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE92DB1F59B2C100D2DAC1 /* AppDelegate.swift */; };
-		D8CE92DE1F59B2C100D2DAC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE92DD1F59B2C100D2DAC1 /* ViewController.swift */; };
 		D8CE92E11F59B2C100D2DAC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8CE92DF1F59B2C100D2DAC1 /* Main.storyboard */; };
 		D8CE92E31F59B2C100D2DAC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8CE92E21F59B2C100D2DAC1 /* Assets.xcassets */; };
 		D8CE92E61F59B2C100D2DAC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8CE92E41F59B2C100D2DAC1 /* LaunchScreen.storyboard */; };
+		D8CE92F21F59B36B00D2DAC1 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE92F11F59B36B00D2DAC1 /* MainTableViewController.swift */; };
+		D8CE92F41F59B78D00D2DAC1 /* ItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE92F31F59B78D00D2DAC1 /* ItemController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D8CE92D81F59B2C100D2DAC1 /* PairRandomizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PairRandomizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8CE92DB1F59B2C100D2DAC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D8CE92DD1F59B2C100D2DAC1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D8CE92E01F59B2C100D2DAC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D8CE92E21F59B2C100D2DAC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8CE92E51F59B2C100D2DAC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8CE92E71F59B2C100D2DAC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8CE92F11F59B36B00D2DAC1 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		D8CE92F31F59B78D00D2DAC1 /* ItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +57,30 @@
 			isa = PBXGroup;
 			children = (
 				D8CE92DB1F59B2C100D2DAC1 /* AppDelegate.swift */,
-				D8CE92DD1F59B2C100D2DAC1 /* ViewController.swift */,
-				D8CE92DF1F59B2C100D2DAC1 /* Main.storyboard */,
+				D8CE92F31F59B78D00D2DAC1 /* ItemController.swift */,
+				D8CE92EE1F59B2DE00D2DAC1 /* UI */,
+				D8CE92ED1F59B2D000D2DAC1 /* Resources */,
+			);
+			path = PairRandomizer;
+			sourceTree = "<group>";
+		};
+		D8CE92ED1F59B2D000D2DAC1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				D8CE92E21F59B2C100D2DAC1 /* Assets.xcassets */,
 				D8CE92E41F59B2C100D2DAC1 /* LaunchScreen.storyboard */,
 				D8CE92E71F59B2C100D2DAC1 /* Info.plist */,
 			);
-			path = PairRandomizer;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D8CE92EE1F59B2DE00D2DAC1 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D8CE92DF1F59B2C100D2DAC1 /* Main.storyboard */,
+				D8CE92F11F59B36B00D2DAC1 /* MainTableViewController.swift */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +156,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8CE92DE1F59B2C100D2DAC1 /* ViewController.swift in Sources */,
+				D8CE92F21F59B36B00D2DAC1 /* MainTableViewController.swift in Sources */,
+				D8CE92F41F59B78D00D2DAC1 /* ItemController.swift in Sources */,
 				D8CE92DC1F59B2C100D2DAC1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
