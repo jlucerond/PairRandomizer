@@ -19,8 +19,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nVR-Dz-jNq">
-                            <rect key="frame" x="0.0" y="117.5" width="375" height="44"/>
+                            <rect key="frame" x="0.0" y="117.5" width="375" height="80"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.51690960570469802" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                             <color key="tintColor" red="0.070338159799999994" green="0.0" blue="0.96084761620000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <state key="normal" title="Randomize">
@@ -56,6 +57,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Randomizer" id="8mW-mQ-xB6">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="3eD-hf-LwM">
+                            <connections>
+                                <action selector="newColorsButtonPressed:" destination="b0S-yu-5YS" id="424-0C-zQI"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="HHZ-ow-Ygd">
                             <connections>
                                 <action selector="addItem:" destination="b0S-yu-5YS" id="CgQ-pv-or0"/>

@@ -46,6 +46,11 @@ class MainTableViewController: UITableViewController {
       ItemController.shared.randomizeItems()
       tableView.reloadData()
    }
+   
+   @IBAction func newColorsButtonPressed(_ sender: UIBarButtonItem) {
+      prettyColors = []
+      tableView.reloadData()
+   }
 }
 
 // Data Source Methods
