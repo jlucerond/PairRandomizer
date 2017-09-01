@@ -10,6 +10,8 @@ import UIKit
 
 class MainTableViewController: UITableViewController {
    
+   var prettyColors: [UIColor] = []
+   
    // MARK: - IBActions
    @IBAction func addItem(_ sender: UIBarButtonItem) {
       let addItemController = UIAlertController(title: "Add New Item",
@@ -68,9 +70,12 @@ extension MainTableViewController {
    override func tableView(_ tableView: UITableView,
                            cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       
+      alterColorArray()
+      
       let item = ItemController.shared.items[indexForItemAt(indexPath: indexPath)]
       let cell = tableView.dequeueReusableCell(withIdentifier: "CellForItem", for: indexPath)
       cell.textLabel?.text = item
+      cell.backgroundColor = prettyColors[indexPath.section]
       return cell
    }
    
@@ -84,7 +89,8 @@ extension MainTableViewController {
                   forSection section: Int) {
       
       guard let view = view as? UITableViewHeaderFooterView else { return }
-      view.textLabel?.textColor = UIColor.yellow
+      view.contentView.backgroundColor = prettyColors[section]
+      view.textLabel?.textColor = UIColor.white
    }
 
 }
@@ -104,5 +110,28 @@ extension MainTableViewController {
 extension MainTableViewController {
    func indexForItemAt(indexPath: IndexPath) -> Int {
       return (indexPath.section * 2) + (indexPath.row)
+   }
+   
+   func alterColorArray() {
+      while prettyColors.count < tableView.numberOfSections{
+         let number1 = Double(arc4random_uniform(255))/255.0
+         let number2 = Double(arc4random_uniform(255))/255.0
+         let number3 = Double(arc4random_uniform(255))/255.0
+         
+         if number1 + number2 + number3 > 2 { continue }
+            
+         else {
+         prettyColors.append(UIColor(
+            red: CGFloat(number1),
+            green: CGFloat(number2),
+            blue: CGFloat(number3),
+            alpha: 1.0
+         ))
+         }
+      }
+      
+      if prettyColors.count > tableView.numberOfSections{
+         prettyColors.removeLast()
+      }
    }
 }

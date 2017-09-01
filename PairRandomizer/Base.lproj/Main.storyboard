@@ -9,25 +9,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Pair Randomizer-->
+        <!--Randomizer-->
         <scene sceneID="1IZ-91-36B">
             <objects>
                 <tableViewController id="b0S-yu-5YS" customClass="MainTableViewController" customModule="PairRandomizer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="JvN-rJ-K7V">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="separatorColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="sectionIndexColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="sectionIndexBackgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="sectionIndexTrackingBackgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nVR-Dz-jNq">
                             <rect key="frame" x="0.0" y="117.5" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <color key="tintColor" red="0.070338159799999994" green="0.0" blue="0.96084761620000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <state key="normal" title="Randomize">
-                                <color key="titleShadowColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" red="0.070338159799999994" green="0.0" blue="0.96084761620000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </state>
                             <connections>
                                 <action selector="randomizeButtonPressed" destination="b0S-yu-5YS" eventType="touchUpInside" id="YQa-bz-OiF"/>
@@ -45,12 +42,12 @@
                                             <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -58,7 +55,7 @@
                             <outlet property="delegate" destination="b0S-yu-5YS" id="Kh2-9p-6Pk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Pair Randomizer" id="8mW-mQ-xB6">
+                    <navigationItem key="navigationItem" title="Randomizer" id="8mW-mQ-xB6">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="HHZ-ow-Ygd">
                             <connections>
                                 <action selector="addItem:" destination="b0S-yu-5YS" id="CgQ-pv-or0"/>
@@ -74,15 +71,10 @@
         <scene sceneID="qWj-Lo-Oni">
             <objects>
                 <navigationController id="jQg-7Y-7YE" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="c5W-6z-0yA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="c5W-6z-0yA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="textShadowColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        </textAttributes>
+                        <color key="tintColor" red="0.070338159799999994" green="0.0" blue="0.96084761620000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <connections>
                         <segue destination="b0S-yu-5YS" kind="relationship" relationship="rootViewController" id="sGF-F8-qLD"/>
